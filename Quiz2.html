@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz 2 - 2115931</title>
+
+    <style>
+      th, td {
+        border: 1px solid black ;
+      }
+
+      table{
+        border: 5px solid lightgrey ;
+        box-shadow: 3px 5px;
+        width: 80%;
+      }
+
+
+      #mainhead{
+        text-align:center;
+        color:#16918D;
+      }
+      #calculate{
+        background-color: gold;
+      }
+
+      #result{
+        background: green;
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <h1 id ="mainhead">IIUM RAMADHAN CHARITY CAMPAIGN</h1>
+
+    <p>In the light of the holy month of Ramadhan, the purpose of the charity campaign is to help Asnaf and marginalized
+      communities in the country by providing food pack</p>
+
+
+    <p>Please enter the donation amount:</p>
+
+    <center>
+    <table>
+      <colgroup>
+        <col >
+        <col>
+      </colgroup>
+      <tr>
+        <th style="background-color: #16918D">Food Pack value</th>
+        <th style="background-color: #16918D">Quantity</th>
+      </tr>
+      <tr>
+        <td>RM 50 Food Pack</td>
+        <td><center>Quantity
+          <input type="number" name="quant" id="quant1">
+        </td>
+      </tr>
+      <tr>
+        <td>RM 100 Food Pack</td>
+        <td><center>Quantity
+          <input type="number" name="quant" id="quant2">
+        </td>
+      </tr>
+      <tr>
+        <td>RM 200 Food Pack</td>
+        <td><center>Quantity
+        <input type="number" name="quant"id="quant3" >
+      </td>
+      </tr>
+    </table>
+
+<br>
+
+    <center>
+    <button type="button" name="button" id="calculate">Calculate</button>
+
+<br>
+
+<p id="result"></p>
+
+<br>
+<br>
+<br>
+
+    <center>
+    <button type="button" name="button" id="proceed">Proceed</button>
+
+<script type="text/javascript">
+
+  const calculate = document.getElementById("calculate");
+  const proceed = document.getElementById("proceed");
+
+  calculate.onclick = function calc(){
+
+    var quant1 = parseInt(document.getElementById("quant1").value);
+    var quant2 = parseInt(document.getElementById("quant2").value);
+    var quant3 = parseInt(document.getElementById("quant3").value);
+    var para = document.getElementById("result");
+    var t1;
+    var t2;
+    var t3;
+    var total;
+
+    t1 = quant1 * 50;
+    t2 = quant2 * 100;
+    t3 = quant3 * 200
+    total = t1 + t2 + t3;
+
+    para.textContent = "Total donation is RM" + total;
+
+  }
+
+  proceed.onclick = function proc(){
+
+    alert("Thank you for your contribution");
+  }
+
+</script>
+
+  </body>
+</html>
